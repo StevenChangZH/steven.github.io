@@ -205,12 +205,12 @@ function initFromSettings(newSettings) {
     controls.loadVideo(settings.video);
   }
 
-  if (settings.autoplay) {
+  //if (settings.autoplay) {
     controls.play();
-  } else if (settings.autoplay === false) {
+ // } else if (settings.autoplay === false) {
     // If user did not explicitly set `autoplay`, don't pause unnecessarily.
-    window.video.pause();
-  }
+   // window.video.pause();
+  //}
 }
 
 window.addEventListener('hashchange', function() {
