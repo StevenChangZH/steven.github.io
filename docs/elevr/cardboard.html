@@ -137,19 +137,17 @@
 
           <input type="range" id="seek-bar" value="0">
 
-          <a id="loop" class="fa fa-chain-broken icon" title="Stop Looping"></a>
+          
 
-          <a id="mute" class="fa fa-volume-up icon" title="Mute"></a>
+          <a id="select-local-file" class="fa fa-folder-open icon hidden" title="Select File"></a>
 
-          <a id="recenter" class="fa fa-dot-circle-o icon" title="Recenter"></a>
-
-          <a id="select-local-file" class="fa fa-folder-open icon rfloat" title="Select File"></a>
-
-          <select id="projection-select" class="rfloat">
+          <select id="projection-select" class="hidden">
             <option value=0>Equirectangular</option>
             <option value=1>Equirectangular 3D</option>
           </select>
 
+          <select id="video-select" class="rfloat">
+          </select>
 
           <a id="full-screen" class="fa fa-expand icon rfloat" title="Full Screen"></a>
         </div>
