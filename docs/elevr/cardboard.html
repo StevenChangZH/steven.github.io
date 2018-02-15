@@ -134,7 +134,6 @@
         <div id="video-controls" class="hidden">
           <a id="play-pause" class="fa fa-play icon" title="Play"></a>
 
-
           <input type="range" id="seek-bar" value="0">
 
           <a id="loop" class="fa fa-chain-broken icon" title="Stop Looping"></a>
@@ -160,26 +159,25 @@
           <a id="full-screen" class="fa fa-expand icon rfloat" title="Full Screen"></a>
         </div>
 
-        <script>
-          runEleVRPlayer();
+        <script>runEleVRPlayer();
 
-        //   var videoL = document.querySelector('play-l');
-        // videoL.addEventListener("contextmenu", function (e) { e.preventDefault(); e.stopPropagation(); }, false);
+var lastCheck = 0;
 
-        // // hide the controls if they're visible
-        // if (videoL.hasAttribute("controls")) {
-        //     videoL.removeAttribute("controls")   
-        // }
+function sleepCheck() {
+        var now = new Date().getTime();
+        var diff = now - lastCheck;
+        if (diff > 3000) {
+                alert('took ' + diff + 'ms');
+        }
+        lastCheck = now;
+}
 
-        // var videoR = document.querySelector('play-r');
-        // videoR.addEventListener("contextmenu", function (e) { e.preventDefault(); e.stopPropagation(); }, false);
+window.onload = function() {
+        lastCheck = new Date().getTime();
+        setInterval(sleepCheck, 1000);
+}
 
-        // // hide the controls if they're visible
-        // if (videoR.hasAttribute("controls")) {
-        //     videoR.removeAttribute("controls")   
-        // }
-
-        </script>
+      </script>
       </div>
 
     </body></html>
