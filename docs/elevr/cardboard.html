@@ -159,6 +159,12 @@
           <a id="full-screen" class="fa fa-expand icon rfloat" title="Full Screen"></a>
         </div>
 
+        <div class="alert alert-error hidden" id="wakeup">
+          <span>
+           <p>Wake up, wake up</p>
+         </span>
+       </div>
+
         <script>runEleVRPlayer();
 
 var lastCheck = 0;
@@ -167,7 +173,8 @@ function sleepCheck() {
         var now = new Date().getTime();
         var diff = now - lastCheck;
         if (diff > 3000) {
-                alert('took ' + diff + 'ms');
+                $("wakeup").show();
+                $("wakeup").hide();
         }
         lastCheck = now;
 }
