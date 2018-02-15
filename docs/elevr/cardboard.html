@@ -160,7 +160,26 @@
           <a id="full-screen" class="fa fa-expand icon rfloat" title="Full Screen"></a>
         </div>
 
-        <script>runEleVRPlayer();</script>
+        <script>
+          runEleVRPlayer();
+
+          var videoL = document.querySelector('play-l');
+        videoL.addEventListener("contextmenu", function (e) { e.preventDefault(); e.stopPropagation(); }, false);
+
+        // hide the controls if they're visible
+        if (videoL.hasAttribute("controls")) {
+            videoL.removeAttribute("controls")   
+        }
+
+        var videoR = document.querySelector('play-r');
+        videoR.addEventListener("contextmenu", function (e) { e.preventDefault(); e.stopPropagation(); }, false);
+
+        // hide the controls if they're visible
+        if (videoR.hasAttribute("controls")) {
+            videoR.removeAttribute("controls")   
+        }
+
+        </script>
       </div>
 
     </body></html>
