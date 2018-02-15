@@ -159,7 +159,7 @@
           <a id="full-screen" class="fa fa-expand icon rfloat" title="Full Screen"></a>
         </div>
 
-        <div class="alert alert-error hidden" id="wakeup">
+        <div class="alert alert-error" id="wakeupAlert">
           <span>
            <p>Wake up, wake up</p>
          </span>
@@ -173,7 +173,7 @@ function sleepCheck() {
         var now = new Date().getTime();
         var diff = now - lastCheck;
         if (diff > 300) {
-                $("wakeup").show();
+                $("wakeupAlert").show();
                 //$("wakeup").hide();
         }
         lastCheck = now;
