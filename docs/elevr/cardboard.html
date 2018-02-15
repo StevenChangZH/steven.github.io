@@ -127,7 +127,7 @@
     <canvas id="glcanvas">
       Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
     </canvas>
-    <video class="hidden" preload="auto" id="video" loop="true" webkit-playsinline crossOrigin="anonymous">
+    <video class="hidden" preload="auto" id="video" loop="true" webkit-playsinline crossOrigin="anonymous" playsinline>
       <source src="therelaxatron2.mp4" type="video/mp4">
     </video>
         <!-- Video Controls -->
@@ -163,21 +163,21 @@
         <script>
           runEleVRPlayer();
 
-          var videoL = document.querySelector('play-l');
-        videoL.addEventListener("contextmenu", function (e) { e.preventDefault(); e.stopPropagation(); }, false);
+        //   var videoL = document.querySelector('play-l');
+        // videoL.addEventListener("contextmenu", function (e) { e.preventDefault(); e.stopPropagation(); }, false);
 
-        // hide the controls if they're visible
-        if (videoL.hasAttribute("controls")) {
-            videoL.removeAttribute("controls")   
-        }
+        // // hide the controls if they're visible
+        // if (videoL.hasAttribute("controls")) {
+        //     videoL.removeAttribute("controls")   
+        // }
 
-        var videoR = document.querySelector('play-r');
-        videoR.addEventListener("contextmenu", function (e) { e.preventDefault(); e.stopPropagation(); }, false);
+        // var videoR = document.querySelector('play-r');
+        // videoR.addEventListener("contextmenu", function (e) { e.preventDefault(); e.stopPropagation(); }, false);
 
-        // hide the controls if they're visible
-        if (videoR.hasAttribute("controls")) {
-            videoR.removeAttribute("controls")   
-        }
+        // // hide the controls if they're visible
+        // if (videoR.hasAttribute("controls")) {
+        //     videoR.removeAttribute("controls")   
+        // }
 
         </script>
       </div>
