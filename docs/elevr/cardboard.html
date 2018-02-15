@@ -172,7 +172,7 @@ var lastCheck = 0;
 function sleepCheck() {
         var now = new Date().getTime();
         var diff = now - lastCheck;
-        if (diff > 3000) {
+        if (diff > 300) {
                 $("wakeup").show();
                 //$("wakeup").hide();
         }
@@ -181,7 +181,7 @@ function sleepCheck() {
 
 window.onload = function() {
         lastCheck = new Date().getTime();
-        setInterval(sleepCheck, 1000);
+        setInterval(sleepCheck, 100);
 }
 
       </script>
