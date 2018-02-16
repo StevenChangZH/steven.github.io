@@ -1,0 +1,4 @@
+Updates
+
+Function adjustment:
+1.Fix a bug that on iOS safari, videos are played by default safari video player instead of the VR player.
